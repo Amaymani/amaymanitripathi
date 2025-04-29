@@ -5,14 +5,19 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { useScroll, motion } from "motion/react";
 
 
-const IntroMain = () => {
+interface Props {
+  name: string
+}
+
+
+const IntroMain = ({name}:Props) => {
   return (
     <motion.div initial="hidden"
         whileInView="visible"
         viewport={{ once: true }} className="mt-[80vh]">
         <BlurFade delay={0.25 * 2} inView>
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-            Amay Mani Tripathi
+           { name}
           </span>
         </BlurFade>
         <div className="text-4xl  flex mt-3 items-center font-bold">

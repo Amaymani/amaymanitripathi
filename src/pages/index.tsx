@@ -8,9 +8,14 @@ import ScrollThingsIDo from "@/components/ScrollThingsIDo";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Projects from "@/components/Projects";
 import { useMotionValue, motion, useSpring } from "framer-motion";
+import {GetStaticProps, InferGetStaticPropsType} from "next";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
-export default function Home() {
+
+type Props = {
+  name: string;
+};
+export default function Home({name}: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -100,7 +105,7 @@ export default function Home() {
             </div>
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
           </a>
-          <IntroMain />
+          <IntroMain name={name} />
 
         </section>
 
@@ -126,3 +131,12 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const name = "Amay Mani Tripathi";
+  return {
+    props: {
+      name,
+    },
+  };
+};
