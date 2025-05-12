@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
      <Head>
         <title>Amay Mani Tripathi | Portfolio</title>
-        <meta name="description" content="Explore the portfolio of Amay Mani Tripathi – a creative problem solver, developer, and innovator. Check out projects, skills, and more!" />
-        <meta name="keywords" content="Amay Mani Tripathi, portfolio, developer, problem solver, projects, skills" />
+        <meta name="description" content="Amay Mani Tripathi - Developer, problem solver, and innovator. View my portfolio, skills, and featured projects. | Portfolio, LinkedIn" />
+        <meta name="keywords" content="Amay Mani Tripathi,  software developer, portfolio, projects, JavaScript, web developer, frontend, backend" />
         <meta name="author" content="Amay Mani Tripathi" />
 
         {/* Open Graph Meta Tags */}
@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="https://amaymanitripathi.vercel.app/Intro.png" />
         <meta property="og:url" content="https://amaymanitripathi.vercel.app/" />
         <meta property="og:type" content="website" />
+        <link rel="me" href="https://www.linkedin.com/in/amaymanitripathi" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />

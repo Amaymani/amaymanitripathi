@@ -16,9 +16,9 @@ const IntroMain = ({name}:Props) => {
         whileInView="visible"
         viewport={{ once: true }} className="mt-[80vh]">
         <BlurFade delay={0.25 * 2} inView>
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10">
            { name}
-          </span>
+          </h1>
         </BlurFade>
         <div className="text-4xl  flex mt-3 items-center font-bold">
           <span>I</span> &nbsp;
